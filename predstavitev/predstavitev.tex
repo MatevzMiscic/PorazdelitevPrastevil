@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, total={16cm, 22cm}]{geometry}
+\usepackage{lmodern}
+\usepackage{amsmath,amsfonts}
+\usepackage{amsthm}
+\usepackage{setspace}
+
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\R{\mathbb{R}}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+\newtheorem{zgled}{Zgled}
+\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+\newtheorem{lema}{Lema}
+\newtheorem{trditev}{Trditev}
+\newtheorem{posledica}{Posledica}
+
+\newenvironment{dokaz}{\begin{proof}[\bfseries\upshape\proofname]}{\end{proof}}
+
+\newcommand{\geslo}[2]{\noindent \textbf{#1} \quad #2 \hfill \break}
+
+\setstretch{1.2}
+
+\title{Porazdelitev praštevil}
+\author{Matevž Miščič}
+\date{22. avgust 2023}
+
+
+
+\begin{document}
+
+\maketitle{}
+
+\section{Uvod}
+Praštevila so v matematiki pomembna, saj so gradniki vseh naravnih števil. Velja namreč, da lahko vsako naravno število, večje od $1$, zapišemo kot produkt praštevil. Poleg matematike so praštevila pomembna tudi v računalništvu, še posebej v kriptografiji. V tej predstavitvi si bomo ogledali nekaj zanimivih rezultatov o porazdelitvi praštevil.
+
+
+
+\section{Praštevilo}
+
+Začnimo z definicijo.
+
+\begin{definicija}
+    Praštevilo je naravno število, ki ima natanko $2$ delitelja.
+\end{definicija}
+Prvih nekaj praštevil je $2, 3, 5, 7, 11, 13, \ldots$.
+
+Naslednja lastnost praštevil je ključnega pomena.
+
+\begin{trditev}
+    \label{factorisation}
+    Vsako naravno število, večje od $1$, se da zapisati kot produkt števil.
+\end{trditev}
+\begin{dokaz}
+    Trditev bomo pokazali z indukcijo. Naj bo $n$ naravno število, ki je večje od $1$. Če sta $1$ in $n$ edina delitelja števila $n$, je $n$ praštevilo in ni kaj dokazati. Sice obstaja nek delitelj $a$ števila $n$, da velja $1 < a < n$. Torej je $n = ab$ za nek $b \in \N$. Ker je $1 < a, b < n$ lahko po indukcijski predpostavki $a$ in $b$ zapišemo kot produkt praštevil, zato enako velja za njun produkt $n$.
+\end{dokaz}
+
+Posledice te trditve je, da je praštevil neskončno mnogo. To je rezultat, ki ga je poznal že Evklid okoli leta 300 pred našim štetjem.
+
+\begin{posledica}
+    Praštevil je neskončno mnogo.
+\end{posledica}
+\begin{dokaz}
+    Recimo, da jih je le končno mnogo. Naj bodo $p_1, p_2, \ldots, p_k$ vsa praštevila. Vzemimo $n = p_1p_2 \cdots p_k + 1$. Po prejšnji trditvi vemo, da lahko $n$ zapišemo kot produkt praštevil, ampak očitno nobeno od praštevil ne deli $n$, torej smo prišli v protislovje.
+\end{dokaz}
+
+
+
+\begin{thebibliography}{1}
+    \bibitem{1}
+    J.~A.~Hocutt in P.~L.~Robinson, \emph{Everywhere Differentiable, Nowhere Continuous Functions}, Amer.~Math.~Monthly \textbf{125} (2018) 923--928.
+    \bibitem{2}
+    P.~R.~Halmos, \emph{Problems for Mathematicians, Young and Old}, Dolciani Mathematical Expositions \textbf{12}, Mathematical Association of America, Washington, 1991.
+\end{thebibliography}
+
+
+\end{document}
