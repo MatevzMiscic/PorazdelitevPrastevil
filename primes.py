@@ -30,13 +30,13 @@ isPrime, primes = eratosten(n)
 pi = Pi(isPrime)
 x = range(2, n)
 y1 = [pi[i] for i in x]
-y2 = [i/math.log(i) for i in x]
+y2 = [1.07 * i/math.log(i) for i in x]
+y3 = [1.2 * i/math.log(i) for i in x]
 
 
 
 fig, ax = plt.subplots()
-ax.plot(x, y1, label="Pi")
-ax.plot(x, y2, label="n/log(n)")
-#ax.set_xlim(-5, 5)
-#ax.set_ylim(0, 25)
+ax.plot(x, y2, color="tab:orange", label="n/log(n)")
+#ax.plot(x, y3, color="tab:orange", label="n/log(n)")
+ax.plot(x, y1, color="tab:blue", label="Pi")
 plt.show()
