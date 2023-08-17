@@ -1,0 +1,3 @@
+Porazdelitev praštevil
+
+Praštevila so gradniki vseh naravnih števil, saj velja, da lahko vsako naravno število zapišemo kot produkt praštevil. Na delavnici si bomo ogledali nekaj osnovnih lasnosti praštevil. Spoznali bomo tudi nekaj rezultatov o tem, kako so praštevila razporejena med naravnimi števili.
