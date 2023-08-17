@@ -17,6 +17,7 @@
 \theoremstyle{definition}
 \newtheorem{definicija}{Definicija}
 \newtheorem{zgled}{Zgled}
+\newtheorem{naloga}{Naloga}
 \theoremstyle{plain}
 \newtheorem{izrek}{Izrek}
 \newtheorem{lema}{Lema}
@@ -61,7 +62,7 @@ Naslednja lastnost praštevil je ključnega pomena.
 
 \begin{trditev}
     \label{factorisation}
-    Vsako naravno število, večje od $1$, se da zapisati kot produkt števil.
+    Vsako naravno število, večje od $1$, se da zapisati kot produkt praštevil.
 \end{trditev}
 \begin{dokaz}
     Trditev bomo pokazali z indukcijo. Naj bo $n$ naravno število, ki je večje od $1$. Če sta $1$ in $n$ edina delitelja števila $n$, je $n$ praštevilo in ni kaj dokazati. Sicer obstaja nek delitelj $a$ števila $n$, da velja $1 < a < n$. Torej je $n = ab$ za nek $b \in \N$. Ker je $1 < a, b < n$ lahko po indukcijski predpostavki $a$ in $b$ zapišemo kot produkt praštevil, zato enako velja za njun produkt $n$.
@@ -76,6 +77,10 @@ Posledica te trditve je, da je praštevil neskončno mnogo. To je rezultat, ki g
     Recimo, da jih je le končno mnogo. Naj bodo $p_1, p_2, \ldots, p_k$ vsa praštevila. Vzemimo $n = p_1p_2 \cdots p_k + 1$. Po prejšnji trditvi vemo, da lahko $n$ zapišemo kot produkt praštevil, ampak očitno nobeno od praštevil ne deli $n$, torej smo prišli v protislovje.
 \end{dokaz}
 
+\begin{naloga}
+    Poišči vse trojice praštevil $p, q, r$, za katere velja $p + q^2 = r^4$.
+\end{naloga}
+
 
 
 \section{Praštevilski izrek}
@@ -88,7 +93,7 @@ Poskusimo formalizirati prejšnje ideje.
 Zanima nas, kako raste funkcija $\pi$. Zgornja intuicija pravi, da raste vedno počasneje.
 
 \begin{izrek}[Čebišov]
-    Obstajata pozitivni realni števili $A, B > 0$, da za vsak $n \in \N$ velja $$A\frac{n}{\log{n}} < \pi(n) < B\frac{n}{\log{n}}.$$
+    Obstajata pozitivni realni števili $A, B > 0$, da za vsak dovolj velik $n \in \N$ velja $$A\frac{n}{\log{n}} < \pi(n) < B\frac{n}{\log{n}}.$$
 \end{izrek}
 
 Po izreku Čebišova torej, funkcija $\pi$ raste približno tako hitro kot funkcija $\frac{n}{\log{n}}$. Velja pa še veliko več, kar pove naslednji izrek.
@@ -131,6 +136,14 @@ Tudi tega izreka ne bomo dokazali, bomo pa pokazali enostaven primer, ko je $a =
 \end{dokaz}
 
 Podoben dokaz deluje tudi za $a = 4$ in $b = 3$.
+
+\begin{naloga}
+    Brez uporabe Dirichletovega izreka pokaži, da obstaja neskončno praštevil oblike $4n + 1$.
+    Namig: Fermatov mali izrek pravi, da za $a$ tuj $p$ da $a^{p - 1}$ ostanek $1$ pri deljenju s $p$.
+\end{naloga}
+\begin{dokaz}
+    Naj bo $n > 1$ naravno število. Oglejmo si $q = (n!)^2 + 1$. Naj bo $p$ najmanjši prafaktor $q$. Očitno je $p > n$. Ker $p$ deli $(n!)^2 + 1$, da $(n!)^2$ ostanek $-1$ pri deljenju s $p$. Ker je $p$ lih, je $\frac{p - 1}{2}$ celo število in velja, da nam da $(n!)^{p - 1}$ ostanek $(-1)^{\frac{p - 1}{2}}$ pri deljenju s $p$. Ker je $n!$ tuj $p$ in $p \neq 2$, je torej $(-1)^{\frac{p - 1}{2}} = 1$, zato je $\frac{p - 1}{2}$ sod in torej je $p$ oblike $4n + 1$ za nek $n$.
+\end{dokaz}
 
 
 
@@ -177,6 +190,8 @@ Izrek bomo dokazali s podrobno analizo tega, katera praštevila delijo centralne
     Centralni binomski koeficient je število $$C_n = \binom{2n}{n} = \frac{(2n)!}{n!^2}.$$
 \end{definicija}
 
+Prvih nekaj centralnih binomskih koeficientov je $C_1 = 2, C_2 = 6, C_3 = 20, C_4 = 70, C_5 = 252$.
+
 \begin{lema}
     \label{lema1}
     Za vsako naravno število $n$ velja $\frac{4^n}{2n} \leq C_n$.
@@ -195,7 +210,7 @@ Izrek bomo dokazali s podrobno analizo tega, katera praštevila delijo centralne
 
 \begin{lema}
     \label{lema3}
-    Za vsako naravno število $n \in \N$ in praštevilo $p \neq 2$ z $\frac{2n}{3} < p < n$ velja, da $p$ ne deli $C_n$. 
+    Za vsako naravno število $n \in \N$ in praštevilo $p$ z $\frac{2n}{3} < p < n$ velja, da $p$ ne deli $C_n$. 
 \end{lema}
 \begin{dokaz}
     Za $n \leq 4$ je trditev očitna. Recimo torej, da je $n \geq 5$. Z dokaza prejšnje leme vemo $$\nu_p(C_n) = \left( \floor*{\frac{2n}{p}} - 2\floor*{\frac{n}{p}} \right) + \left( \floor*{\frac{2n}{p^2}} - 2\floor*{\frac{n}{p^2}} \right) + \cdots.$$ Ker je $\frac{2n}{3} < p < n$, je $1 < \frac{n}{p} < \frac{3}{2}$, zato je $\floor*{\frac{2n}{p}} = 2\floor*{\frac{n}{p}} = 2$ in $\floor*{\frac{2n}{p}} - 2\floor*{\frac{n}{p}} = 0$. Potem za $k \geq 2$ velja $p^k \geq p^2 > (\frac{2n}{3})^2 = \frac{4}{9}n^2 > 2n$, kjer smo v zadnji neenakosti upoštevali $n \geq 5$. Sledi $\floor*{\frac{2n}{p^k}} - 2\floor*{\frac{n}{p^k}} = 0$, torej je $\nu_p(C_n) = 0$ oziroma $p$ ne deli $C_n$.
