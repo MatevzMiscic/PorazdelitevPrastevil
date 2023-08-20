@@ -56,6 +56,7 @@
 \section{Praštevila}
 \begin{frame}
     \frametitle{Praštevila}
+    \pause
     \begin{definicija}
         \textbf{Praštevilo} je naravno število, ki ima natanko dva delitelja.
 
@@ -89,10 +90,12 @@
 \begin{frame}
     \frametitle{Praštevilski izrek}
     Med večjimi števili so praštevila bolj redka.
+    \pause
     \medskip
     \begin{definicija}
         Za naravno število $n \in \N$ s \textbf{$\pi(n)$} označimo število praštevil manjših ali enakih $n$.
     \end{definicija}
+    \pause
     \medskip
     Zanima nas, kako raste funkcija $\pi$.
 \end{frame}
@@ -139,14 +142,19 @@
 \section{Praštevila v aritmetičnih zaporedjih}
 \begin{frame}
     \frametitle{Praštevila v aritmetičnih zaporedjih}
-    \begin{izrek}[Dirichlet]
-        Naj bosta $a, b \in \N$ tuji si števili. Potem je med členi zaporedja $an + b, n \in \N$ neskončno praštevil.
-    \end{izrek}
     \pause
     \begin{exampleblock}{Zgled}
-        Če je $a = 3$ in $b = 6$, dobimo aritmetično zaporedje $9, 12, 15, 18, 21, 24, \ldots$. V tem zaporedju so vsi členi deljivi s $3$, ki je največji skupni delitelj $a$ in $b$.
-        \medskip
-        Če je $a = 8$ in $b = 3$, dobimo zaporedje $11, 14, 17, 20, 23, 26, 29, \ldots$. Od tega so $11, 17, 23, 29$ praštevila. Po Dirichletovem izreku obstaja neskončno praštevilskih členov tega zaporedja.
+        Če je $a = 3$ in $b = 6$, dobimo aritmetično zaporedje $6, 9, 12, 15, 18, 21, 24, \ldots$. V tem zaporedju so vsi členi deljivi s $3$, ki je največji skupni delitelj $a$ in $b$.
+    \end{exampleblock}
+    \pause
+    \medskip
+    \begin{izrek}[Dirichlet]
+        Naj bosta $a, b \in \N$ tuji si števili. Potem je med členi zaporedja $an + b, n \in \N_0$ neskončno praštevil.
+    \end{izrek}
+    \pause
+    \medskip
+    \begin{exampleblock}{Zgled}
+        Če je $a = 3$ in $b = 8$, dobimo zaporedje $8, 11, 14, 17, 20, 23, 26, 29, \ldots$. Od tega so $11, 17, 23, 29$ praštevila. Po Dirichletovem izreku obstaja neskončno praštevilskih členov tega zaporedja.
     \end{exampleblock}
 \end{frame}
 
@@ -166,6 +174,7 @@
     \begin{trditev}
         Obstajajo poljubno veliki bloki zaporednih naravnih števil, ki so vsa sestavljena števila.
     \end{trditev}
+    \pause
     \medskip
     Po praštevilskem izreku je povprečen razmak med preštevili manjšimi od $n$ približno $\log{n}$. Razmaki torej postajajo vse večji.
 \end{frame}
